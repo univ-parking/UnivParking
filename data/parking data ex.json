@@ -1,0 +1,32 @@
+[
+    {
+        "model": "api.SVC_I_PARK",
+        "CRUD": "update",
+        "fields": {
+            "AN": 1,
+            "PC": 0,
+            "PT": 0,
+            "type": 1
+        }
+    },
+    {
+        "model": "api.SVC_I_PARK",
+        "CRUD": "update",
+        "fields": {
+            "AN": 2,
+            "PC": 1,
+            "PT": 0,
+            "type": 1
+        }
+    },
+    {
+        "model": "api.SVC_I_PARK",
+        "CRUD": "update",
+        "fields": {
+            "AN": 3,
+            "PC": 1,
+            "PT": 0,
+            "type": 1
+        }
+    }
+]
