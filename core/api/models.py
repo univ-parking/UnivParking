@@ -7,12 +7,16 @@ class SVC_I_PARK(models.Model):
     AN = models.IntegerField()
 
     PC = models.BooleanField(
-        default=False
+        default=False,
+        null=True,
+        blank=True
     )
 
     # Parking Time
     PT = models.IntegerField(
-        default=0
+        default=0,
+        null=True,
+        blank=True
     )
 
     type = models.ForeignKey(
@@ -20,8 +24,12 @@ class SVC_I_PARK(models.Model):
         on_delete=models.CASCADE,
     )
 
-    created_data = models.DateTimeField(auto_now_add=True)
-    updated_data = models.DateTimeField(auto_now=True)
+    created_data = models.DateTimeField(
+        auto_now_add=True,
+        )
+    updated_data = models.DateTimeField(
+        auto_now=True,
+        )
 
 
 
