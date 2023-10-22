@@ -122,8 +122,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', # mysqlclient librarly 설치
+        'NAME': 'univpark',
+        'USER': 'dev',
+        'PASSWORD': env.str(
+        "MARIA_DB_ROOT_PASSWORD",
+            default="",
+            ), # mariaDB 설치 시 입력한 root 비밀번호 입력
+        'HOST': 'univ-parking.xyz',
+        'PORT': '3306'
     }
 }
 
