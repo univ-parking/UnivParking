@@ -163,7 +163,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+
 
 AWS_ACCESS_KEY_ID = env.str(
     "AWS_ACCESS_KEY_ID",
@@ -263,8 +266,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8080','http://localhost:8080']
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8080','http://localhost:8080']
+CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000']
+CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000']
 
 CORS_ALLOW_HEADERS = (
     'access-control-allow-credentials',
