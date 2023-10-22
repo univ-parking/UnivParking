@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import ParkingAPIView, ParkingDetailAPIView
+from .views import ParkingAPIView, ParkingDetailAPIView, ParkingTypeAPIView
 from .file import ParkingDataAPIView
 
 app_name = "api"
@@ -14,5 +14,8 @@ urlpatterns = [
 
 	# Parking Data
 	path('parking/data/', ParkingDataAPIView.as_view()),
+
+	# Parking Type List
+	path('parking/type', ParkingTypeAPIView.as_view())
 
 	]
