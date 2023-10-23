@@ -17,7 +17,7 @@ result = {
 
 class ParkingAPIView(APIView):
     allowed_methods = ['PATCH']
-
+ 
     def get(self, request):
         # 모든 모델 인스턴스를 가져오고 직렬화합니다.
         queryset = SVC_I_PARK.objects.all()
