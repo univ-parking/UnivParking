@@ -11,19 +11,10 @@ from datetime import datetime
 
 from botocore.exceptions import NoCredentialsError
 
-from django.utils.decorators import decorator_from_middleware, method_decorator
-from .middleware import AutoTokenRefreshMiddleware
-from rest_framework_simplejwt.authentication import JWTAuthentication
-from rest_framework.permissions import IsAuthenticated
-
 current_time = str(datetime.now().strftime('%Y-%m-%d %H:%M'))
 
-class ParkingDataAPIView(APIView):
-    def get(self):
-        pass
-
-
-    def post(self, request):
+class ParkingDataSaveAPIView(APIView):
+    def get(self, request):
         s3, bucket_name = s3_connection()
         object_name = 'data/' + current_time + ' parking data.csv'
 
@@ -34,7 +25,7 @@ class ParkingDataAPIView(APIView):
         df['DT'] = pd.to_datetime(df['updated_data']).dt.strftime('%Y-%m-%d %H:%M')
         df = df.drop(['created_data', 'updated_data', 'id', 'PT'], axis=1)
 
-        df.to_csv('./data/data.csv')
+        df.to_csv(object_name)
 
         try:
             s3.upload_file('./data/test.csv', bucket_name, object_name)

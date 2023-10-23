@@ -12,12 +12,11 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
 
 
-result = {
-}
+result = dict()
 
 class ParkingAPIView(APIView):
     allowed_methods = ['PATCH']
- 
+
     def get(self, request):
         # 모든 모델 인스턴스를 가져오고 직렬화합니다.
         queryset = SVC_I_PARK.objects.all()
@@ -75,7 +74,7 @@ class ParkingDetailAPIView(APIView):
     def get(self, request, type_id, AN=None):
         try:
             if AN == None:
-                queryset = SVC_I_PARK.objects.filter(type=SVC_T_PARK.objects.get(pk=type_id))
+                queryset = SVC_I_PARK.objects.filter(type=SVC_T_PARK.objects.get(pkb=type_id))
             else:
                 queryset = SVC_I_PARK.objects.filter(id=AN, type=SVC_T_PARK.objects.get(pk=type_id))
         except SVC_I_PARK.DoesNotExist:
@@ -109,6 +108,5 @@ class ParkingTypeAPIView(APIView):
             'count': len(queryset),
             'detail': serializer.data
             }
-
         return Response(result)
 
