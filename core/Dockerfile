@@ -1,7 +1,10 @@
-FROM python:latest
+FROM python:3.10
 
 # 컨테이너 내 프로젝트 root directory 설정
 WORKDIR /usr/src/app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # 필요한 module 설치
 COPY requirements.txt ./

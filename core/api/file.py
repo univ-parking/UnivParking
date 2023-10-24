@@ -44,3 +44,30 @@ class ParkingDataSaveAPIView(APIView):
             }
         return Response(data)
 
+    def post(self, request):
+        import numpy as np
+        import cv2
+
+        if 'image' not in request.FILES:
+            return Response('Empty Content', status=status.HTTP_400_BAD_REQUEST)
+        else:
+            print("hello")
+            # 이미지 파일을 읽어옵니다.
+            image_file = request.FILES['image']
+            image_data = image_file.read()
+
+            # 이미지 데이터를 NumPy 배열로 변환
+            nparr = np.frombuffer(image_data, np.uint8)
+            image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+            # 이미지 처리 작업 수행 (예: 회전, 필터 적용 등)
+            # 처리된 이미지를 반환 (이 예제에서는 그대로 반환)
+            w, h = 640, 480
+            location = np.array([[113, 91], [520, 91], [603, 414], [28, 421]], np.float32)
+            location2 = np.array([[0, 0], [w, 0], [w, h], [0, h]], np.float32)
+            pers = cv2.getPerspectiveTransform(location, location2)
+            dst = cv2.warpPerspective(image, pers, (w, h))
+
+            cv2.imwrite('test.jpg', dst)
+
+            return Response('Empty Content', status=status.HTTP_200_OK)
