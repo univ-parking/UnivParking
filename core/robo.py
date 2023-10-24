@@ -24,7 +24,12 @@ with open('coordinate/img_labeling_list.json', 'r') as file:
 while 1:
     try:
         # img modeling - api.py
-        data = model.predict('test.jpg', confidence=40, overlap=30).json()
+        try:
+            data = model.predict('test.jpg', confidence=40, overlap=30).json()
+        except:
+            print('no image')
+            time.sleep(1)
+            continue
         for datas in data.get("predictions"):
             x_coordinate = datas.get('x')
             y_coordinate = datas.get('y')
