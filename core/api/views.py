@@ -74,7 +74,7 @@ class ParkingDetailAPIView(APIView):
     def get(self, request, type_id, AN=None):
         try:
             if AN == None:
-                queryset = SVC_I_PARK.objects.filter(type=SVC_T_PARK.objects.get(pkb=type_id))
+                queryset = SVC_I_PARK.objects.filter(type=SVC_T_PARK.objects.get(pk=type_id))
             else:
                 queryset = SVC_I_PARK.objects.filter(id=AN, type=SVC_T_PARK.objects.get(pk=type_id))
         except SVC_I_PARK.DoesNotExist:
@@ -98,7 +98,7 @@ class ParkingTypeAPIView(APIView):
         except SVC_T_PARK.DoesNotExist:
             result['detail'] = '해당 객체를 찾을 수 없습니다.'
             result['status'] = {
-                'code': 404,
+                'oldcode': 404,
                 'detail': status.HTTP_404_NOT_FOUND
                 }
             return Response(result, status=status.HTTP_404_NOT_FOUND)
