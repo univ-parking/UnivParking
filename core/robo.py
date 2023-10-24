@@ -5,7 +5,6 @@ import time
 import requests
 
 # 변수 선언
-is_parked = np.zeros(23, dtype="int")
 type_id = 1
 lastdata = list()
 host = "http://univ-parking.xyz/"
@@ -23,7 +22,7 @@ with open('coordinate/img_labeling_list.json', 'r') as file:
 # 이미지 캡처
 while 1:
     try:
-        is_parked = list()
+        is_parked = np.zeros(23, dtype="int")
         # img modeling - api.py
         try:
             data = model.predict('test.jpg', confidence=40, overlap=30).json()
