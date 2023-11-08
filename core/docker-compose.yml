@@ -7,7 +7,6 @@ services:
       - "80:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./core/static:/static
     depends_on:
       - core
     restart: always
@@ -21,7 +20,6 @@ services:
       - "8000"
     volumes:
       - .:/core
-      - ./core/static:/core/static
     restart: always
 
   # main:

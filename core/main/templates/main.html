@@ -50,7 +50,7 @@
         <div class="container">
             <header class="d-flex flex-wrap justify-content-between p-2 border-bottom align-items-bottom">
                 <a href="{% url 'main' %}" class="d-flex align-items-end link-body-emphasis text-decoration-none">
-                    <img src="{% static 'img/logo.png' %}" alt="univ parking logo" class="img-fluid" width="100">
+                    <img src="https://parking-univ.s3.ap-northeast-2.amazonaws.com/static/logo.png" alt="univ parking logo" class="img-fluid" width="100">
                 </a>
                 <ul class="pe-2 nav nav-underline">
                     <li class="nav-item">
@@ -155,7 +155,7 @@
                 </div>
             </main>
             <footer class="text-center">
-                <img src="{% static 'img/대림대로고.png' %}" class="img-fluid" alt="" width="150">
+                <img src="https://parking-univ.s3.ap-northeast-2.amazonaws.com/static/%E1%84%83%E1%85%A2%E1%84%85%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A2%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" class="img-fluid" alt="" width="150">
             </footer>
         </div>
     </section>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <img src="{% static 'img/201930319 이정민.jpeg' %}" width="200" alt="">
+                        <img src="https://parking-univ.s3.ap-northeast-2.amazonaws.com/static/201930319+%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%86%E1%85%B5%E1%86%AB.jpeg" width="200" alt="">
                     </div>
                     <p class="px-5 pt-2 text-start">
                         이름 : 이정민<br>
@@ -224,7 +224,7 @@
                         } else {
                             $("#" + index).css("background-color", "#F7948B");
                             if ($("#" + index + " img").length === 0) {
-                                $("#" + index).append('<img class="" src="{% static 'img/car.png' %}"></img>');
+                                $("#" + index).append('<img class="" src="https://parking-univ.s3.ap-northeast-2.amazonaws.com/static/car.png"></img>');
                             }
                         }
                     });
