@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from accounts.views import *
+from main.views import *
 from rest_framework_simplejwt.views import TokenRefreshView, TokenObtainPairView, TokenVerifyView, TokenBlacklistView
 from rest_framework.routers import DefaultRouter
 
@@ -34,6 +35,9 @@ urlpatterns = [
     path('api/v1/auth/refresh/', TokenRefreshView.as_view()),
     path('api/v1/auth/verify/', TokenVerifyView.as_view()),
     path('api/v1/auth/logout/', TokenBlacklistView.as_view()),
+
+    path('main', main_page, name="main"),
+    path('main/team', team_page, name="team"),
 
     # path('api/v1/token/', obtain_jwt_token),
     # path('api/v1/token/refresh/', refresh_jwt_token),

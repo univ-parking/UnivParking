@@ -1,0 +1,260 @@
+{% load static %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            /* 원하는 배경색으로 설정 */
+            z-index: 1000;
+            /* 다른 요소 위에 표시되도록 설정 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* 그림자 효과 추가 */
+        }
+
+        main {
+            padding-top: 90px;
+            /* 예시로 80px 사용, 헤더의 높이에 맞게 조절하세요 */
+        }
+
+        .parkinglot {
+            height: 80px;
+            width: 120px;
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+    </style>
+    <section style="max-width: 1000px;">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-between p-2 border-bottom align-items-bottom">
+                <a href="{% url 'main' %}" class="d-flex align-items-end link-body-emphasis text-decoration-none">
+                    <img src="{% static 'img/logo.png' %}" alt="univ parking logo" class="img-fluid" width="100">
+                </a>
+                <ul class="pe-2 nav nav-underline">
+                    <li class="nav-item">
+                        <button type="button" class="nav-link text-black fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            조장
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'main' %}">시연하기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{% url 'team' %}">차대?</a>
+                    </li>
+                </ul>
+            </header>
+            <main>
+                <div class="haeder">
+                    <div class="d-flex flex-wrap justify-content-center align-items-end text-center">
+                        <span class="display-3">전산관 주차장</span>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-evenly">
+                            <div>
+                                <span>주차 가능한 공간 : </span><span id="parkingCnt" class="text-primary fw-bold"></span>
+                            </div>
+                            <div>
+                                <span>총 주차공간 : </span><span>23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between py-4">
+                    <table class="table table-bordered border-black rounded" style="width: 60%; ">
+                        <tbody class="text-center">
+                            <tr>
+                                <td class="parkinglot" id="8"></td>
+                                <td class="parkinglot" id="16"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="7"></td>
+                                <td class="parkinglot" id="15"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="6"></td>
+                                <td class="parkinglot" id="14"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="5"></td>
+                                <td class="parkinglot" id="13"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="4"></td>
+                                <td class="parkinglot" id="12"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="3"></td>
+                                <td class="parkinglot" id="11"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="2"></td>
+                                <td class="parkinglot" id="10"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="1"></td>
+                                <td class="parkinglot" id="9"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered border-black rounded" style="width: 30%; ">
+                        <tbody class="text-center">
+                            <tr>
+                                <td class="parkinglot" id="23"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="22"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="21"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="20"></td>
+                            </tr>
+                            <tr>
+                                <td class="parkinglot" id="19"></td>
+                            </tr>
+                            <tr>
+                                <td class="bg-info parkinglot" id="18"></td>
+                            </tr>
+                            <tr>
+                                <td class="bg-info"></td>
+                            </tr>
+                            <tr>
+                                <td class="bg-info parkinglot" id="17"></td>
+                            </tr>
+                            <tr>
+                                <td class="bg-info"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer class="text-center">
+                <img src="{% static 'img/대림대로고.png' %}" class="img-fluid" alt="" width="150">
+            </footer>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">조장</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="{% static 'img/201930319 이정민.jpeg' %}" width="200" alt="">
+                    </div>
+                    <p class="px-5 pt-2 text-start">
+                        이름 : 이정민<br>
+                        연락처 : <a href='tel:01033370861'>010-3337-0861</a><br>
+                        <small class="lighter">혹시나 작품 소개가 필요하시다면, 연락주세요!</small><br>
+                    </p>
+
+                    <p class="p-3">
+                        대림대학교 컴퓨터정보학부 융합소프트웨어학과<br>
+                        (주) 일릭서 공동 창업자 4인 중 1인 - 현재 재직중<br>
+                    </p>
+
+                    <p>
+                        안녕하세요, 차대 대표 이정민입니다.
+                    </p>
+                    <p>
+                        어제(11/8) 등교를 하며 주차장 상태나 주차를 하는 모습을 지켜보는 시간을 가졌습니다.<br><br>
+                        가장 처음으로 느꼈던건, 주차가 엄청 힘들구나,, 였습니다. <br>
+                        특히, 구석진 곳에 있는 주차 구역은 안에 주차 공간이 있는지 없는지를 확인하지 못해 안에 주차공간이 없을 경우, 그 좁은 골목길을 빠져나와야 하고 학생들의 등교를 피해가며 다시 다른 주차공간을 찾아가는 모습을 봤습니다.<br><br>
+                        이 문제는 저희 '차대'가 해결해 나가는 키라고 생각합니다. <br>
+                        더 완성도 높은 작품을 만들겠습니다. <br><br>
+                        저희 작품을 봐주셔서 감사합니다! <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 클릭 이벤트를 처리하는 함수
+        function updateData() {
+            const parkingLotCnt = 23;
+            // AJAX 요청 보내기
+            $.ajax({
+                url: "http://127.0.0.1:8000/api/v1/parking/1/", // 서버의 URL을 여기에 넣어주세요
+                type: "GET",
+                dataType: "json", // 서버로부터 받을 데이터 타입을 JSON으로 설정
+                success: function (jsonData) {
+                    // JSON 데이터를 화면에 표시
+                    var arrayData = jsonData.data.array;
+                    let count = 0;
+
+                    arrayData.forEach((data, index) => {
+                        index = index + 1
+
+                        if (data === false) {
+                            $("#" + index + " img").remove();
+                            $("#" + index).css("background-color", "#DDE6F9");
+                        } else {
+                            $("#" + index).css("background-color", "#F7948B");
+                            if ($("#" + index + " img").length === 0) {
+                                $("#" + index).append('<img class="" src="{% static 'img/car.png' %}"></img>');
+                            }
+                        }
+                    });
+
+
+                    for (const item of arrayData) {
+                        if (item === true) {
+                            count++;
+                        }
+                    }
+
+                    document.getElementById('parkingCnt').innerHTML = parkingLotCnt - count;
+
+                },
+                error: function (error) {
+                    console.log("에러 발생: " + error);
+                }
+            });
+        }
+
+        // 1초에 한 번씩 updateData 함수를 호출
+        setInterval(updateData, 1500);
+
+        // 페이지 로드시 한번 호출
+        updateData();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

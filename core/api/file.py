@@ -51,7 +51,6 @@ class ParkingDataSaveAPIView(APIView):
         if 'image' not in request.FILES:
             return Response('Empty Content', status=status.HTTP_400_BAD_REQUEST)
         else:
-            print("hello")
             # 이미지 파일을 읽어옵니다.
             image_file = request.FILES['image']
             image_data = image_file.read()

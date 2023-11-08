@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import pymysql
+
+pymysql.install_as_MySQLdb()
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,10 +55,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'corsheaders',
 
     # myapp
     'accounts',
     'api',
+    'main',
 
     # django-rest-auth
     'rest_framework',
@@ -94,6 +99,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
     'api.middleware.AutoTokenRefreshMiddleware',  # 미들웨어 추가
+    'corsheaders.middleware.CorsMiddleware',
+
     ]
 
 ROOT_URLCONF = 'core.urls'
@@ -101,7 +108,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -173,8 +180,13 @@ USE_TZ = False  # False 로 설정해야 DB에 변경 된 TIME_ZONE 이 반영 �
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# 정적 파일 URL
+STATIC_URL = '/static/'
+
+# 정적 파일 디렉토리 경로 설정
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 
 
