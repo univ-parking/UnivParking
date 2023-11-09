@@ -7,7 +7,7 @@ import requests
 # 변수 선언
 type_id = 1
 lastdata = list()
-host = "http://api.univ-parking.xyz/"
+host = "http://univ-parking.xyz/"
 # host = "http://localhost:8000/"
 
 # 카메라 설정
@@ -50,11 +50,11 @@ while 1:
         if is_parked.tolist() == lastdata:
             pass
         else:
-            response = requests.patch(host+"parking/", json=response_data,)
+            response = requests.patch(host+"api/v1/parking/", json=response_data,)
             if response.status_code == 200:
-                response = requests.get(host+"parking/data/save")
+                response = requests.get(host+"api/v1/parking/data/save")
                 if response.status_code == 200:
-                    response = requests.get(host+"parking/"+str(type_id)+"/", )
+                    response = requests.get(host+"api/v1/parking/"+str(type_id)+"/", )
                     data = json.loads(response.text)
                     lastdata = data.get('data').get('array')
                 else:
