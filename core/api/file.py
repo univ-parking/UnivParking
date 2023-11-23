@@ -18,6 +18,8 @@ base_path = str(datetime.now().strftime('%Y-%m-%d'))
 #  만약, 객체탐지 이후 변경졈이 있다면, s3버킷에 저장하는 형태로 간다.
 #  변경점이 없다면 유지
 class ParkingDataSaveAPIView(APIView):
+    allowed_methods = ['GET', 'POST', 'OPTIONS']  # Include 'OPTIONS'
+
     def get(self, request):
         s3, bucket_name = s3_connection()
         object_name = 'data/' + base_path + '/' + current_time + ' Data.csv'

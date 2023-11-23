@@ -15,7 +15,7 @@ from rest_framework.permissions import IsAuthenticated
 result = dict()
 
 class ParkingAPIView(APIView):
-    allowed_methods = ['PATCH']
+    allowed_methods = ['GET', 'POST', 'PATCH', 'OPTIONS']  # Include 'OPTIONS'
 
     def get(self, request):
         # 모든 모델 인스턴스를 가져오고 직렬화합니다.
@@ -71,6 +71,8 @@ class ParkingAPIView(APIView):
 
 
 class ParkingDetailAPIView(APIView):
+    allowed_methods = ['GET', 'OPTIONS']  # Include 'OPTIONS'
+
     def get(self, request, type_id, AN=None):
         try:
             if AN == None:
@@ -92,6 +94,8 @@ class ParkingDetailAPIView(APIView):
 
 
 class ParkingTypeAPIView(APIView):
+    allowed_methods = ['GET', 'OPTIONS']  # Include 'OPTIONS'
+
     def get(self, request):
         try:
             queryset = SVC_T_PARK.objects.all()
