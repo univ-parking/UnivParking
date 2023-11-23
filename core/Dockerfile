@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED=1
 # 필요한 module 설치
 COPY requirements.txt ./
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -qr requirements.txt
 
 # 프로젝트 코드 복사
 COPY . .

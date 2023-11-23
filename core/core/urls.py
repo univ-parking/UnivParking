@@ -36,8 +36,8 @@ urlpatterns = [
     path('api/v1/auth/verify/', TokenVerifyView.as_view()),
     path('api/v1/auth/logout/', TokenBlacklistView.as_view()),
 
-    path('main', main_page, name="main"),
-    path('main/team', team_page, name="team"),
+    # path('main', main_page, name="main"),
+    # path('main/team', team_page, name="team"),
 
     # path('api/v1/token/', obtain_jwt_token),
     # path('api/v1/token/refresh/', refresh_jwt_token),
