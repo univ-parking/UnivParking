@@ -8,26 +8,26 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
-      - core
+      - web
     restart: always
+
   core:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: core
     command: sh -c "python3 manage.py migrate && gunicorn core.wsgi:application --bind 0.0.0.0:8000"
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
     volumes:
       - .:/core
     restart: always
 
-  # main:
-  #   container_name: main
-  #   image: nginx:latest
-  #   expose:
-  #     - "8080"
-  #   volumes:
-  #     - ./main/nginx.conf:/etc/nginx/nginx.conf
-  #   restart: always
-  
+  web:
+    build:
+      context: ../../UnivParking_FE  # Corrected the context path
+      dockerfile: Dockerfile
+    container_name: nextjs-app
+    ports:
+      - "3000:3000"
+    restart: always
