@@ -25,7 +25,7 @@ services:
 
   web:
     build:
-      context: ../../UnivParking_FE  # Corrected the context path
+      context: ../../UnivParking_FE_Test  # Corrected the context path
       dockerfile: Dockerfile
     container_name: nextjs-app
     ports:
