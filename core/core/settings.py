@@ -284,43 +284,50 @@ SIMPLE_JWT = {
 
 # CSRF
 
-CORS_ALLOW_METHODS = [  # 허용할 옵션
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-]
-
-CORS_ORIGIN_ALLOW_ALL = True
-
+##### CORS config start #####
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xyz', 'http://127.0.0.1:3000']
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xym', 'http://127.0.0.1:3000']
-CORS_ALLOW_ALL_ORIGINS: True
 
-CORS_ALLOW_HEADERS = (
-    'access-control-allow-credentials',
-    'access-control-allow-origin',
-    'access-control-request-method',
-    'access-control-request-headers',
-    'accept',
-    'accept-encoding',
-    'accept-language',
-    'authorization',
-    'connection',
-    'content-type',
-    'dnt',
-    'credentials',
-    'host',
-    'origin',
-    'user-agent',
-    'X-CSRFToken',
-    'csrftoken',
-    'x-requested-with',
-)
+# 전부 허용 할 경우
+CORS_ALLOW_ALL_ORIGINS = True
 
+#
+# CORS_ALLOW_METHODS = [  # 허용할 옵션
+#     "DELETE",
+#     "GET",
+#     "OPTIONS",
+#     "PATCH",
+#     "POST",
+#     "PUT",
+# ]
+#
+# CORS_ORIGIN_ALLOW_ALL = True
+#
+# CORS_ALLOW_CREDENTIALS = True
+# CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xyz', 'http://127.0.0.1:3000']
+# CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xym', 'http://127.0.0.1:3000']
+# CORS_ALLOW_ALL_ORIGINS: True
+#
+# CORS_ALLOW_HEADERS = (
+#     'access-control-allow-credentials',
+#     'access-control-allow-origin',
+#     'access-control-request-method',
+#     'access-control-request-headers',
+#     'accept',
+#     'accept-encoding',
+#     'accept-language',
+#     'authorization',
+#     'connection',
+#     'content-type',
+#     'dnt',
+#     'credentials',
+#     'host',
+#     'origin',
+#     'user-agent',
+#     'X-CSRFToken',
+#     'csrftoken',
+#     'x-requested-with',
+# )
+#
 
 # cron setting
 
