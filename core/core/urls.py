@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path("v1/user/register/", RegisterAPIView.as_view()),  # post - 회원가입
-    path("v1/user/auth/", UserLoginAPI.as_view()),
+    path("sv1/user/auth/", UserLoginAPI.as_view()),
     # post - 로그인, delete - 로그아웃, get - 유저정보
     path("v1/", include("api.urls")),
 
