@@ -284,16 +284,21 @@ SIMPLE_JWT = {
 
 # CSRF
 
+CORS_ALLOW_METHODS = [  # 허용할 옵션
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
-
 CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xyz', 'http://127.0.0.1:3000']
 CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xym', 'http://127.0.0.1:3000']
-
-CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000','http://api.univ-parking.xyz','http://univ-parking.xyz', 'http://127.0.0.1:3000'
-]
+CORS_ALLOW_ALL_ORIGINS: True
 
 CORS_ALLOW_HEADERS = (
     'access-control-allow-credentials',
@@ -315,7 +320,6 @@ CORS_ALLOW_HEADERS = (
     'csrftoken',
     'x-requested-with',
 )
-
 
 
 # cron setting
