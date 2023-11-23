@@ -40,7 +40,7 @@ SECRET_KEY = env.str(
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -288,8 +288,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000']
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000']
+CSRF_TRUSTED_ORIGINS =  ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000']
+CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000','http://localhost:8000', 'http://124.51.235.215:8000', 'http://localhost:3000','http://124.51.235.215:3000']
 
 CORS_ALLOW_HEADERS = (
     'access-control-allow-credentials',

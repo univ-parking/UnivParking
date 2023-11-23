@@ -1,0 +1,10 @@
+services:
+  djangoapp:
+    build:
+        context: .
+        dockerfile: Dockerfile.prod
+    command: gunicorn core.wsgi:application --bind 0.0.0.0:8000
+    expose:
+    - "8000:8000"
+    depends_on:
+      - db
