@@ -326,5 +326,5 @@ CORS_ALLOW_HEADERS = (
 
 CRONJOBS = [
     # ('*/1 * * * *', 'core.cron.crontab_every_minute', '>> '+os.path.join(BASE_DIR, 'config/log/cron.log'),
-    ('*/1 * * * *', 'core.cron.crontab_every_minute', '>> '+os.path.join(BASE_DIR, 'config/log/cron.log')+' 2>&1 ')
+    # ('*/1 * * * *', 'core.cron.crontab_every_minute', '>> '+os.path.join(BASE_DIR, 'config/log/cron.log')+' 2>&1 ')
 ]
