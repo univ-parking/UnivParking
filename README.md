@@ -1,2 +1,27 @@
-# UnivParking_API
-주차 대학교의 API Server
+# 주차 대학교, 차대
+
+```
+저희 차대는 주차 대학교의 줄임말로
+대학교의 주차장을 관리, 서비스 하는 PaaS 플랫폼 입니다.
+
+이번 프로젝트는 대림대학교를 타겟팅으로 하고 있으며
+대림대학교의 주차장 중 하나를 관리, 서비스 하고 있습니다.
+
+차대 서비스의 최대 장점
+적은 비용 (Low Cost)
+빠른 적용 (Fast Apply)
+어디서나 사용 가능 (Using Everywhere)
+```
+
+### 팀 소개
+- [이정민](https://github.com/jeongmingz) - 팀장, Backend, UIUX, Deep leaning Modeling, CICD, 서버
+- [정승민](https://github.com/HarenKei) - 팀원, Frontend, UIUX
+
+### 사용된 스택
+[![USED STACKS](https://skillicons.dev/icons?i=django,ts,nextjs,nginx)](https://skillicons.dev)
+
+---
+### DOCS
+| 기획 | UI | PPT |
+|------------|---------|-----------|
+| [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=553-731&t=b2GSnltjTYyWhESL-1) | [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=13-2&t=b2GSnltjTYyWhESL-1) | [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=553-634&t=b2GSnltjTYyWhESL-1) |
