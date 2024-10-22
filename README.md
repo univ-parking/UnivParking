@@ -34,6 +34,5 @@
 | [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=553-731&t=b2GSnltjTYyWhESL-1) | [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=13-2&t=b2GSnltjTYyWhESL-1) | [![FIGMA LINK](https://skillicons.dev/icons?i=figma)](https://www.figma.com/design/PZYxxZZ7aH49Ja7fzCqnqK/%EC%B0%A8-%EB%8C%80?node-id=553-634&t=b2GSnltjTYyWhESL-1) |
 
 ### 주차대학교 브로슈어
----
 ![겉지](https://github.com/univ-parking/UnivParking/blob/main/readme/%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%AD%20%E1%84%80%E1%85%A5%E1%87%80%E1%84%8C%E1%85%B5.png)
 ![속지](https://github.com/univ-parking/UnivParking/blob/main/readme/%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%AD%20%E1%84%89%E1%85%A9%E1%86%A8%E1%84%8C%E1%85%B5.png)
