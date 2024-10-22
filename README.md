@@ -25,7 +25,11 @@
 - 황준하 - 팀원, 테스트, 데이터 수집
 
 ### 사용된 스택
-[![USED STACKS](https://skillicons.dev/icons?i=django,ts,nextjs,nginx,docker,python)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=django)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=ts)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=nginx)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=python)](https://skillicons.dev)
 
 ---
 ### DOCS
