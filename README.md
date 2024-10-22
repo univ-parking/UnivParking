@@ -18,14 +18,14 @@
 ```
 
 ### 팀 소개
-- [이정민](https://github.com/jeongmingz) - 팀장, Backend, UIUX, Deep leaning Modeling, CICD, 서버
-- [정승민](https://github.com/HarenKei) - 팀원, Frontend, UIUX
+- [이정민](https://github.com/jeongmingz) - 팀장, Backend, UI/UX, Deep leaning Modeling, CICD, 서버
+- [정승민](https://github.com/HarenKei) - 팀원, Frontend, UI/UX
 - 이규민 - 팀원, 테스트, 데이터 수집
 - 김동해 - 팀원, 테스트, 데이터 수집
 - 황준하 - 팀원, 테스트, 데이터 수집
 
 ### 사용된 스택
-[![USED STACKS](https://skillicons.dev/icons?i=django,ts,nextjs,nginx,docker)](https://skillicons.dev)
+[![USED STACKS](https://skillicons.dev/icons?i=django,ts,nextjs,nginx,docker,python)](https://skillicons.dev)
 
 ---
 ### DOCS
