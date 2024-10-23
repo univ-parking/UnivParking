@@ -26,8 +26,25 @@
 
 ### 사용된 스택
 [![django](https://skillicons.dev/icons?i=django)](https://skillicons.dev)
+
+
+---
 [![typescript](https://skillicons.dev/icons?i=ts)](https://skillicons.dev)
 [![nextjs](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
+```
+  Next.js는 React.js 기반의 웹 프레임워크입니다.
+  Next.js를 FE 개발에 사용함으로써 얻을 수 있는 이점은 여러 개가 있으나 Popping에서는 다음과 같은 이점을 위해 Next.js를 사용하였습니다.
+```
+
+1. SEO 최적화
+> Next.js는 서버에서 HTML을 제공할 수 있기 때문에 검색 엔진이 웹 사이트의 콘텐츠를 쉽게 크롤링 할 수 있고, 많은 사람들이 찾아 활성화되어야 의미가 있는 커뮤니티 웹 애플리케이션인 Popping은 SEO 최적화가 필수적이라고 생각하였습니다.
+
+2. 경로 기반 라우팅
+> Next.js의 경로 기반 라우팅을 사용하면 페이지 전반에 걸쳐 사용될 layout과 예외 처리 페이지 등의 관리와 개발 과정에서 웹 애플리케이션의 URL 구성을 손쉽게 할 수 있다는 장점이 있다고 생각하였습니다.
+
+3. 이미지 최적화
+> Next.js에서는 next/image의 <Image> 요소를 통해 손쉽게 이미지를 최적화하여 사용자로 하여금 이미지 로드에 부담을 덜 수 있습니다. 많은 팝업 스토어와 식당 등을 알리기 위한 이미지 사용이 잦은 Popping에서 이미지 최적화는 필수적이라고 생각하였습니다. 
+---
 [![nginx](https://skillicons.dev/icons?i=nginx)](https://skillicons.dev)
 [![docker](https://skillicons.dev/icons?i=docker)](https://skillicons.dev)
 
