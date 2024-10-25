@@ -26,14 +26,24 @@
 
 ### 사용된 스택
 [![django](https://skillicons.dev/icons?i=django)](https://skillicons.dev)
+```
+  Django는 Python 기반의 웹 프레임 워크입니다.
+  Django는 풀스택 웹 프레임 워크로 사용됩니다.
 
+  해당 프로젝트에서는 프론트앤드의 스택이 정해져 있어, API 통신만을 위한 Django Rest FrameWork(DRF) 를 사용하였습니다.
+  - 이정민
+```
 
+1. ORM
+> ORM은 데이터베이스와의 데이터 통신을 SQL문이 아닌 Python문을 사용할 수 있는 방법이다.
+> ORM을 사용하여 데이터베이스와 통신은 Django가 효율적이고 자원낭비 없는 SQL문으로 변환해준다.
 ---
 [![typescript](https://skillicons.dev/icons?i=ts)](https://skillicons.dev)
 [![nextjs](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
 ```
   Next.js는 React.js 기반의 웹 프레임워크입니다.
   Next.js를 FE 개발에 사용함으로써 얻을 수 있는 이점은 여러 개가 있으나 Popping에서는 다음과 같은 이점을 위해 Next.js를 사용하였습니다.
+  - 정승민
 ```
 
 1. SEO 최적화
